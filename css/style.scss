@@ -416,6 +416,93 @@ button.accordion.active:after {
     margin-bottom: 54px;
   }
 }
+
+/**************************************Modal****************************************/
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #050622;
+  background-image: url(../images/modal-bg.png);
+  background-repeat: no-repeat;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+  }
+  &__footer {
+    text-align: center;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 46px;
+    color: #ffffff;
+    a {
+      background: linear-gradient(93.1deg, #4fc0ff 74.23%, #564fff 103.7%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+}
+
+.form {
+  &__btn {
+    display: inline-block;
+  }
+  &__wrapper {
+    margin: 0 auto;
+    max-width: 762px;
+    max-height: 544px;
+    background: linear-gradient(
+      180deg,
+      #1e2242 27.07%,
+      rgba(30, 34, 66, 0) 100%
+    );
+    filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.11));
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    padding-top: 64px;
+    position: relative;
+    .modal__close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+  }
+  &__title {
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 46px;
+    color: #ffffff;
+  }
+  &__input {
+    background: rgba(86, 79, 255, 0.15);
+    border: 1px solid #564fff;
+    border-radius: 5px;
+    padding: 27px 28px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    color: #ffffff;
+    min-width: 522px;
+    &::placeholder {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 18px;
+      color: #ffffff;
+    }
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .benefits__block,
   .price__list {
@@ -754,5 +841,22 @@ button.accordion.active:after {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 30px;
+  }
+
+  .form__input {
+    padding: 15px 15px;
+    min-width: auto;
+  }
+  .form__title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .modal__footer {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .form__input::placeholder {
+    font-size: 10px;
+    line-height: 12px;
   }
 }
