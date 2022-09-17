@@ -1,0 +1,758 @@
+@import "./font";
+@import "./vars";
+@import "./reset";
+
+body {
+  font-family: "TT Interfaces";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: $colorWhite;
+  background-color: #050622;
+}
+
+.container-big {
+  max-width: ($containerBigWidth + $containerPadding) + px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $containerSidePadding + px;
+}
+.container {
+  max-width: ($containerWidth + $containerPadding) + px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $containerSidePadding + px;
+}
+
+.header {
+  background: url("../images/header-bg.png");
+  background-repeat: no-repeat;
+  padding-bottom: 70px;
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 46px;
+    padding-bottom: 54px;
+  }
+  &__btn {
+    background: $colorSecondary;
+    border: 1px solid colorSecondary;
+    text-transform: uppercase;
+  }
+  &__control {
+    display: flex;
+    column-gap: 20px;
+  }
+}
+
+.logo {
+  &__link {
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 32px;
+    color: $colorWhite;
+    text-transform: uppercase;
+    span {
+      color: #18baff;
+    }
+  }
+}
+.btn {
+  border-radius: 5px;
+  padding: 13px 22px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: $colorWhite;
+  display: block;
+  &:hover {
+    background: lighten($colorSecondary, 20%);
+    color: darken($colorWhite, 90%);
+  }
+  transition: all 0.5s ease-in-out;
+}
+.light-btn {
+  padding: 13px 20px;
+  background: rgba(86, 79, 255, 0.15);
+  border: 1px solid $colorSecondary;
+}
+.hero {
+  display: flex;
+  gap: 25px;
+  &__content {
+    flex: 1 0 40%;
+    margin-top: 70px;
+  }
+  &__image {
+    img {
+      max-width: 100%;
+    }
+  }
+  &__title {
+    font-weight: 800;
+    font-size: 56px;
+    line-height: 72px;
+    span {
+      background: linear-gradient(100.54deg, #18baff 78.39%, #4500d9 111.87%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+}
+.gamers {
+  display: flex;
+  gap: 47px;
+
+  &__text {
+    background: linear-gradient(119.36deg, #18baff 19.35%, #4500d9 126.51%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+.title {
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 46px;
+  text-align: center;
+}
+.text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: $colorText;
+}
+.text-padding {
+  margin-top: 14px;
+  margin-bottom: 26px;
+}
+.num {
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 46px;
+}
+.benefits {
+  &__block {
+    display: flex;
+    margin-top: 54px;
+    gap: 26px;
+  }
+  &__item {
+    position: relative;
+    background: linear-gradient(
+      180deg,
+      #1e2242 27.07%,
+      rgba(30, 34, 66, 0) 100%
+    );
+    padding: 54px 54px 59px 35px;
+  }
+  &__item-title {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 31px;
+    margin-bottom: 11px;
+  }
+  &__item-text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: $colorText;
+  }
+  &__item-img {
+    position: absolute;
+    top: -33px;
+  }
+}
+
+.platforms {
+  &__block-top {
+    padding-top: 75px;
+    padding-bottom: 25px;
+    background: linear-gradient(180deg, #0e112d 50%, rgba(14, 17, 45, 0) 100%);
+  }
+  &__block-bottom {
+    padding-bottom: 50px;
+    background: linear-gradient(180deg, #0d0f2c 0%, rgba(13, 15, 44, 0) 50%);
+  }
+  &__wrapper {
+    display: flex;
+    gap: 110px;
+    padding-top: 64px;
+  }
+  &__content {
+    flex: 1 0 50%;
+  }
+  &_img {
+    flex: 1 0 50%;
+  }
+  &__title {
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 41px;
+  }
+  &__subtitle {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  &__list {
+    padding-left: 20px;
+    li {
+      list-style: disc;
+    }
+  }
+  &__controls {
+    margin-top: 30px;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+  &__btn {
+    background: #564fff;
+    padding: 19px 65px;
+    text-transform: uppercase;
+  }
+  &__text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: $colorText;
+  }
+  &__link {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: $colorSecondary;
+  }
+}
+
+.price {
+  padding-bottom: 100px;
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  &__device {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    align-items: center;
+  }
+  &__android {
+    padding: 19px 60px;
+    background: #564fff;
+  }
+  &__ios {
+    padding: 19px 73px;
+  }
+  &__icon {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 17px;
+  }
+  &__wrapper {
+    margin-top: 17px;
+    background: linear-gradient(180deg, #1e2242 0%, rgba(30, 34, 66, 0) 100%);
+    border-radius: 5px;
+    padding: 23px 24px 0 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 375px;
+    padding-bottom: 31px;
+  }
+  &__title {
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 39px;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  .normal {
+    color: #ffb800;
+  }
+  .ultra {
+    background: linear-gradient(109.57deg, #ff2525 17.14%, #ff3636 81.72%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  &__description {
+    padding: 0 20px;
+    li {
+      list-style: disc;
+    }
+  }
+  &__num {
+    text-align: center;
+  }
+  &__term {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    text-align: center;
+  }
+  &__btn {
+    background: linear-gradient(106.14deg, #18baff 20.27%, #564fff 78.28%);
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 27px 0;
+    transition: all 0.7s ease-in-out;
+  }
+  .favorite {
+    position: relative;
+  }
+  .favorite::after {
+    content: "";
+    background-image: url(../images/star-icon.svg);
+    background-repeat: no-repeat;
+    top: -40px;
+    right: -38px;
+    position: absolute;
+    height: 75px;
+    width: 75px;
+  }
+}
+.platforms__img {
+  img {
+    width: 100%;
+  }
+}
+
+.questions {
+  &__content {
+    margin-top: 50px;
+    margin-bottom: 80px;
+  }
+  &__btn {
+    background: $colorSecondary;
+  }
+  &__link {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 37px;
+  }
+}
+
+// ********************************************Accordion style********************************
+
+.accordion {
+  background: linear-gradient(180deg, #1e2242 0%, #1e2242 100%);
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 31px 42px 31px 34px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  color: $colorWhite;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}
+.questions__accordion {
+  margin-bottom: 16px;
+  background: linear-gradient(180deg, #1e2242 0%, #1e2242 100%);
+  border-radius: 5px;
+}
+.bottom {
+  margin-bottom: 9px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.accordion:hover {
+  background-color: #fff;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  margin-top: -12px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 0 196px 35px 34px;
+  color: $colorText;
+  display: none;
+  overflow: hidden;
+  border-radius: 0 0 5px 5px;
+}
+
+button.accordion:after {
+  content: "\002B";
+  color: #fff;
+  font-weight: bold;
+  font-size: 35px;
+  float: right;
+  margin-left: 5px;
+}
+button.accordion.active:after {
+  content: "\2212";
+}
+
+.footer {
+  &__pay {
+    display: flex;
+    justify-content: center;
+    gap: 33px;
+  }
+  &__copyright {
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #676b8b;
+    margin-top: 22px;
+    margin-bottom: 54px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .benefits__block,
+  .price__list {
+    flex-wrap: wrap;
+  }
+  .price .favorite::after {
+    right: -20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding-bottom: 0;
+  }
+  .hero {
+    gap: 0;
+    flex-direction: column-reverse;
+  }
+  .hero__content {
+    margin-top: 0;
+  }
+  .hero__title {
+    text-align: center;
+  }
+  .benefits {
+    margin-top: 70px;
+  }
+  .gamers {
+    justify-content: center;
+  }
+  .price .favorite::after {
+    right: -20px;
+  }
+  .platforms__wrapper {
+    flex-direction: column;
+  }
+  .ios-wrapper {
+    flex-direction: column-reverse;
+  }
+  .platforms__title {
+    text-align: center;
+  }
+  .price__wrapper {
+    height: 470px;
+  }
+  .panel {
+    padding: 0 20px 20px 34px;
+  }
+  .platforms__img {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 460px) {
+  .container-big {
+    padding: 0 40px;
+  }
+  .header {
+    background: url(../images/header-bg-mobile.png);
+    padding-bottom: 0;
+    background-repeat: no-repeat;
+    &__header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 20px;
+      padding-bottom: 43px;
+    }
+  }
+  .logo {
+    display: none;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0;
+    &__content {
+      margin-top: 0;
+    }
+    &__title {
+      font-weight: 800;
+      font-size: 34px;
+      line-height: 44px;
+      text-align: center;
+    }
+  }
+  .text {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+  }
+  .text-padding {
+    padding: 0 5px;
+    margin-top: 9px;
+    margin-bottom: 23px;
+  }
+  .num {
+    font-size: 26px;
+    line-height: 33px;
+  }
+  .gamers {
+    gap: 35px;
+    justify-content: center;
+    &__text {
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 16px;
+      span {
+        display: none;
+      }
+    }
+  }
+  .benefits {
+    margin-top: 51px;
+    margin-bottom: 45px;
+    &__block {
+      gap: 30px;
+      flex-direction: column;
+      margin-top: 57px;
+      padding: 0 40px;
+    }
+    &.benefits__item-img {
+      top: -30px;
+      height: 58px;
+      width: 57px;
+    }
+    &__item-title {
+      font-size: 20px;
+      line-height: 26px;
+    }
+    &__item-text {
+      font-size: 13px;
+      line-height: 16px;
+    }
+    &__item {
+      padding: 50px 38px 50px 30px;
+    }
+  }
+  .title {
+    font-size: 23px;
+    line-height: 30px;
+  }
+  .container {
+    padding: 0 40px;
+  }
+  .platforms {
+    &__wrapper {
+      gap: 110px;
+      padding-top: 64px;
+      flex-direction: column-reverse;
+    }
+    &__block-top {
+      padding-top: 20px;
+    }
+    &__title {
+      text-align: center;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 7px;
+        right: 95px;
+        height: 28px;
+        width: 25px;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+  ._title-android::after {
+    background-image: url(../images/android-icon.svg);
+  }
+  ._title-ios::after {
+    background-image: url(../images/apple-icon.svg);
+  }
+  .platforms {
+    &__list li {
+      list-style-position: inside;
+    }
+    &__subtitle {
+      text-align: center;
+    }
+    &__list {
+      font-size: 12px;
+    }
+    &__controls {
+      flex-direction: column;
+      text-align: center;
+    }
+    &__img {
+      img {
+        width: 100%;
+      }
+      position: relative;
+      &::before {
+        content: "Menu";
+        position: absolute;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 23px;
+        color: #9a9a9a;
+        left: calc(50% - 25px);
+        top: -28px;
+      }
+    }
+    &__wrapper {
+      gap: 67px;
+    }
+  }
+  .ios-wrapper {
+    flex-direction: column;
+  }
+
+  .price {
+    &__list {
+      display: block;
+      margin: 0 27px;
+    }
+    &__wrapper {
+      padding: 23px 20px 31px 29px;
+      min-height: 350px;
+    }
+    &__item {
+      margin-bottom: 16px;
+    }
+    &__description {
+      text-align: left;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  .panel {
+    margin-top: 0;
+    font-size: 13px;
+    line-height: 16px;
+    padding: 0 21px 35px 24px;
+    text-align: justify;
+  }
+  .accordion {
+    font-size: 14px;
+    line-height: 18px;
+    padding: 22px 26px 16px 24px;
+  }
+  button.accordion:after {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  .container,
+  .container-big {
+    padding: 0 10px;
+  }
+  .btn {
+    padding: 10px 15px;
+    font-size: 10px;
+    line-height: 14px;
+  }
+  .hero__title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .text {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 15px;
+  }
+  .num {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .gamers__text {
+    font-size: 10px;
+    line-height: 15px;
+  }
+  .title {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .benefits__block {
+    margin-top: 30px;
+    padding: 0px 10px;
+  }
+  .benefits__item-img {
+    top: -20px;
+    height: 35px;
+  }
+  .benefits__item {
+    padding: 20px 20px 30px 25px;
+  }
+  .benefits__item-title {
+    font-size: 17px;
+    line-height: 20px;
+  }
+  .benefits__item-text {
+    font-size: 10px;
+    line-height: 15px;
+  }
+  .platforms__wrapper {
+    padding-top: 10px;
+  }
+  .platforms__title {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  .platforms__title::after {
+    top: 8px;
+    right: 70px;
+    height: 20px;
+    width: 20px;
+  }
+  .platforms__text,
+  .platforms__link {
+    font-size: 10px;
+    line-height: 15px;
+  }
+  .price {
+    padding-bottom: 30px;
+  }
+  .accordion {
+    font-size: 12px;
+    line-height: 16px;
+    padding: 10px;
+  }
+  .panel {
+    font-size: 10px;
+    line-height: 15px;
+    padding: 10px 15px 15px 15px;
+  }
+  .footer__pay {
+    gap: 20px;
+  }
+  .footer__copyright {
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+}

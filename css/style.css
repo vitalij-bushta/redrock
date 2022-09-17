@@ -1,0 +1,843 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "TT Interfaces";
+  src: url("../font/TTInterfaces-MediumItalic.eot");
+  src: local("TT Interfaces Medium Italic"), local("TTInterfaces-MediumItalic"), url("../font/../font/TTInterfaces-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../font/../font/TTInterfaces-MediumItalic.woff2") format("woff2"), url("../font/../font/TTInterfaces-MediumItalic.woff") format("woff"), url("../font/../font/TTInterfaces-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "TT Interfaces";
+  src: url("../font/TTInterfaces-SemiBold.eot");
+  src: local("TT Interfaces SemiBold"), local("TTInterfaces-SemiBold"), url("../font/TTInterfaces-SemiBold.eot?#iefix") format("embedded-opentype"), url("../font/TTInterfaces-SemiBold.woff2") format("woff2"), url("../font/TTInterfaces-SemiBold.woff") format("woff"), url("../font/TTInterfaces-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT Interfaces";
+  src: url("../font/TTInterfaces-Medium.eot");
+  src: local("TT Interfaces Medium"), local("TTInterfaces-Medium"), url("../font/TTInterfaces-Medium.eot?#iefix") format("embedded-opentype"), url("../font/TTInterfaces-Medium.woff2") format("woff2"), url("../font/TTInterfaces-Medium.woff") format("woff"), url("../font/TTInterfaces-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT Interfaces";
+  src: url("../font/TTInterfaces-ExtraBold.eot");
+  src: local("TT Interfaces ExtraBold"), local("TTInterfaces-ExtraBold"), url("../font/TTInterfaces-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../font/TTInterfaces-ExtraBold.woff2") format("woff2"), url("../font/TTInterfaces-ExtraBold.woff") format("woff"), url("../font/TTInterfaces-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT Interfaces";
+  src: url("../font/TTInterfaces-Bold.eot");
+  src: local("TT Interfaces Bold"), local("TTInterfaces-Bold"), url("../font/TTInterfaces-Bold.eot?#iefix") format("embedded-opentype"), url("../font/TTInterfaces-Bold.woff2") format("woff2"), url("../font/TTInterfaces-Bold.woff") format("woff"), url("../font/TTInterfaces-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+aside,
+nav,
+footer,
+header,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+body {
+  font-family: "TT Interfaces";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #fff;
+  background-color: #050622;
+}
+
+.container-big {
+  max-width: 1402px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.container {
+  max-width: 1290px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  background: url("../images/header-bg.png");
+  background-repeat: no-repeat;
+  padding-bottom: 70px;
+}
+.header__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 46px;
+  padding-bottom: 54px;
+}
+.header__btn {
+  background: #564fff;
+  border: 1px solid colorSecondary;
+  text-transform: uppercase;
+}
+.header__control {
+  display: flex;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.logo__link {
+  font-weight: 800;
+  font-size: 25px;
+  line-height: 32px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.logo__link span {
+  color: #18baff;
+}
+
+.btn {
+  border-radius: 5px;
+  padding: 13px 22px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: #fff;
+  display: block;
+  transition: all 0.5s ease-in-out;
+}
+.btn:hover {
+  background: #b8b5ff;
+  color: #1a1a1a;
+}
+
+.light-btn {
+  padding: 13px 20px;
+  background: rgba(86, 79, 255, 0.15);
+  border: 1px solid #564fff;
+}
+
+.hero {
+  display: flex;
+  gap: 25px;
+}
+.hero__content {
+  flex: 1 0 40%;
+  margin-top: 70px;
+}
+.hero__image img {
+  max-width: 100%;
+}
+.hero__title {
+  font-weight: 800;
+  font-size: 56px;
+  line-height: 72px;
+}
+.hero__title span {
+  background: linear-gradient(100.54deg, #18baff 78.39%, #4500d9 111.87%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gamers {
+  display: flex;
+  gap: 47px;
+}
+.gamers__text {
+  background: linear-gradient(119.36deg, #18baff 19.35%, #4500d9 126.51%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.title {
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 46px;
+  text-align: center;
+}
+
+.text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #a7a7c8;
+}
+
+.text-padding {
+  margin-top: 14px;
+  margin-bottom: 26px;
+}
+
+.num {
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 46px;
+}
+
+.benefits__block {
+  display: flex;
+  margin-top: 54px;
+  gap: 26px;
+}
+.benefits__item {
+  position: relative;
+  background: linear-gradient(180deg, #1e2242 27.07%, rgba(30, 34, 66, 0) 100%);
+  padding: 54px 54px 59px 35px;
+}
+.benefits__item-title {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 31px;
+  margin-bottom: 11px;
+}
+.benefits__item-text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #a7a7c8;
+}
+.benefits__item-img {
+  position: absolute;
+  top: -33px;
+}
+
+.platforms__block-top {
+  padding-top: 75px;
+  padding-bottom: 25px;
+  background: linear-gradient(180deg, #0e112d 50%, rgba(14, 17, 45, 0) 100%);
+}
+.platforms__block-bottom {
+  padding-bottom: 50px;
+  background: linear-gradient(180deg, #0d0f2c 0%, rgba(13, 15, 44, 0) 50%);
+}
+.platforms__wrapper {
+  display: flex;
+  gap: 110px;
+  padding-top: 64px;
+}
+.platforms__content {
+  flex: 1 0 50%;
+}
+.platforms_img {
+  flex: 1 0 50%;
+}
+.platforms__title {
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 41px;
+}
+.platforms__subtitle {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+}
+.platforms__list {
+  padding-left: 20px;
+}
+.platforms__list li {
+  list-style: disc;
+}
+.platforms__controls {
+  margin-top: 30px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+.platforms__btn {
+  background: #564fff;
+  padding: 19px 65px;
+  text-transform: uppercase;
+}
+.platforms__text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #a7a7c8;
+}
+.platforms__link {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #564fff;
+}
+
+.price {
+  padding-bottom: 100px;
+}
+.price__list {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.price__device {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  align-items: center;
+}
+.price__android {
+  padding: 19px 60px;
+  background: #564fff;
+}
+.price__ios {
+  padding: 19px 73px;
+}
+.price__icon {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 17px;
+}
+.price__wrapper {
+  margin-top: 17px;
+  background: linear-gradient(180deg, #1e2242 0%, rgba(30, 34, 66, 0) 100%);
+  border-radius: 5px;
+  padding: 23px 24px 0 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 375px;
+  padding-bottom: 31px;
+}
+.price__title {
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 39px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.price .normal {
+  color: #ffb800;
+}
+.price .ultra {
+  background: linear-gradient(109.57deg, #ff2525 17.14%, #ff3636 81.72%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.price__description {
+  padding: 0 20px;
+}
+.price__description li {
+  list-style: disc;
+}
+.price__num {
+  text-align: center;
+}
+.price__term {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 21px;
+  text-align: center;
+}
+.price__btn {
+  background: linear-gradient(106.14deg, #18baff 20.27%, #564fff 78.28%);
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 27px 0;
+  transition: all 0.7s ease-in-out;
+}
+.price .favorite {
+  position: relative;
+}
+.price .favorite::after {
+  content: "";
+  background-image: url(../images/star-icon.svg);
+  background-repeat: no-repeat;
+  top: -40px;
+  right: -38px;
+  position: absolute;
+  height: 75px;
+  width: 75px;
+}
+
+.platforms__img img {
+  width: 100%;
+}
+
+.questions__content {
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+.questions__btn {
+  background: #564fff;
+}
+.questions__link {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 37px;
+}
+
+.accordion {
+  background: linear-gradient(180deg, #1e2242 0%, #1e2242 100%);
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 31px 42px 31px 34px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.questions__accordion {
+  margin-bottom: 16px;
+  background: linear-gradient(180deg, #1e2242 0%, #1e2242 100%);
+  border-radius: 5px;
+}
+
+.bottom {
+  margin-bottom: 9px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.accordion:hover {
+  background-color: #fff;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  margin-top: -12px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 0 196px 35px 34px;
+  color: #a7a7c8;
+  display: none;
+  overflow: hidden;
+  border-radius: 0 0 5px 5px;
+}
+
+button.accordion:after {
+  content: "+";
+  color: #fff;
+  font-weight: bold;
+  font-size: 35px;
+  float: right;
+  margin-left: 5px;
+}
+
+button.accordion.active:after {
+  content: "−";
+}
+
+.footer__pay {
+  display: flex;
+  justify-content: center;
+  gap: 33px;
+}
+.footer__copyright {
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: #676b8b;
+  margin-top: 22px;
+  margin-bottom: 54px;
+}
+
+@media screen and (max-width: 1024px) {
+  .benefits__block,
+.price__list {
+    flex-wrap: wrap;
+  }
+  .price .favorite::after {
+    right: -20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header {
+    padding-bottom: 0;
+  }
+  .hero {
+    gap: 0;
+    flex-direction: column-reverse;
+  }
+  .hero__content {
+    margin-top: 0;
+  }
+  .hero__title {
+    text-align: center;
+  }
+  .benefits {
+    margin-top: 70px;
+  }
+  .gamers {
+    justify-content: center;
+  }
+  .price .favorite::after {
+    right: -20px;
+  }
+  .platforms__wrapper {
+    flex-direction: column;
+  }
+  .ios-wrapper {
+    flex-direction: column-reverse;
+  }
+  .platforms__title {
+    text-align: center;
+  }
+  .price__wrapper {
+    height: 470px;
+  }
+  .panel {
+    padding: 0 20px 20px 34px;
+  }
+  .platforms__img {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 460px) {
+  .container-big {
+    padding: 0 40px;
+  }
+  .header {
+    background: url(../images/header-bg-mobile.png);
+    padding-bottom: 0;
+    background-repeat: no-repeat;
+  }
+  .header__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 43px;
+  }
+  .logo {
+    display: none;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+  .hero__content {
+    margin-top: 0;
+  }
+  .hero__title {
+    font-weight: 800;
+    font-size: 34px;
+    line-height: 44px;
+    text-align: center;
+  }
+  .text {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+  }
+  .text-padding {
+    padding: 0 5px;
+    margin-top: 9px;
+    margin-bottom: 23px;
+  }
+  .num {
+    font-size: 26px;
+    line-height: 33px;
+  }
+  .gamers {
+    gap: 35px;
+    justify-content: center;
+  }
+  .gamers__text {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .gamers__text span {
+    display: none;
+  }
+  .benefits {
+    margin-top: 51px;
+    margin-bottom: 45px;
+  }
+  .benefits__block {
+    gap: 30px;
+    flex-direction: column;
+    margin-top: 57px;
+    padding: 0 40px;
+  }
+  .benefits.benefits__item-img {
+    top: -30px;
+    height: 58px;
+    width: 57px;
+  }
+  .benefits__item-title {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .benefits__item-text {
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .benefits__item {
+    padding: 50px 38px 50px 30px;
+  }
+  .title {
+    font-size: 23px;
+    line-height: 30px;
+  }
+  .container {
+    padding: 0 40px;
+  }
+  .platforms__wrapper {
+    gap: 110px;
+    padding-top: 64px;
+    flex-direction: column-reverse;
+  }
+  .platforms__block-top {
+    padding-top: 20px;
+  }
+  .platforms__title {
+    text-align: center;
+    position: relative;
+  }
+  .platforms__title::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    right: 95px;
+    height: 28px;
+    width: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  ._title-android::after {
+    background-image: url(../images/android-icon.svg);
+  }
+  ._title-ios::after {
+    background-image: url(../images/apple-icon.svg);
+  }
+  .platforms__list li {
+    list-style-position: inside;
+  }
+  .platforms__subtitle {
+    text-align: center;
+  }
+  .platforms__list {
+    font-size: 12px;
+  }
+  .platforms__controls {
+    flex-direction: column;
+    text-align: center;
+  }
+  .platforms__img {
+    position: relative;
+  }
+  .platforms__img img {
+    width: 100%;
+  }
+  .platforms__img::before {
+    content: "Menu";
+    position: absolute;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    color: #9a9a9a;
+    left: calc(50% - 25px);
+    top: -28px;
+  }
+  .platforms__wrapper {
+    gap: 67px;
+  }
+  .ios-wrapper {
+    flex-direction: column;
+  }
+  .price__list {
+    display: block;
+    margin: 0 27px;
+  }
+  .price__wrapper {
+    padding: 23px 20px 31px 29px;
+    min-height: 350px;
+  }
+  .price__item {
+    margin-bottom: 16px;
+  }
+  .price__description {
+    text-align: left;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .panel {
+    margin-top: 0;
+    font-size: 13px;
+    line-height: 16px;
+    padding: 0 21px 35px 24px;
+    text-align: justify;
+  }
+  .accordion {
+    font-size: 14px;
+    line-height: 18px;
+    padding: 22px 26px 16px 24px;
+  }
+  button.accordion:after {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  .container,
+.container-big {
+    padding: 0 10px;
+  }
+  .btn {
+    padding: 10px 15px;
+    font-size: 10px;
+    line-height: 14px;
+  }
+  .hero__title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .text {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 15px;
+  }
+  .num {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .gamers__text {
+    font-size: 10px;
+    line-height: 15px;
+  }
+  .title {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .benefits__block {
+    margin-top: 30px;
+    padding: 0px 10px;
+  }
+  .benefits__item-img {
+    top: -20px;
+    height: 35px;
+  }
+  .benefits__item {
+    padding: 20px 20px 30px 25px;
+  }
+  .benefits__item-title {
+    font-size: 17px;
+    line-height: 20px;
+  }
+  .benefits__item-text {
+    font-size: 10px;
+    line-height: 15px;
+  }
+  .platforms__wrapper {
+    padding-top: 10px;
+  }
+  .platforms__title {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  .platforms__title::after {
+    top: 8px;
+    right: 70px;
+    height: 20px;
+    width: 20px;
+  }
+  .platforms__text,
+.platforms__link {
+    font-size: 10px;
+    line-height: 15px;
+  }
+  .price {
+    padding-bottom: 30px;
+  }
+  .accordion {
+    font-size: 12px;
+    line-height: 16px;
+    padding: 10px;
+  }
+  .panel {
+    font-size: 10px;
+    line-height: 15px;
+    padding: 10px 15px 15px 15px;
+  }
+  .footer__pay {
+    gap: 20px;
+  }
+  .footer__copyright {
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+}/*# sourceMappingURL=style.css.map */

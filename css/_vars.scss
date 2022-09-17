@@ -1,0 +1,10 @@
+// Container & Breakpoints
+@use "sass:math";
+$containerBigWidth: 1362;
+$containerWidth: 1250;
+$containerPadding: 40;
+$containerSidePadding: math.div($containerPadding, 2);
+
+$colorText: #a7a7c8;
+$colorWhite: #fff;
+$colorSecondary: #564fff;
